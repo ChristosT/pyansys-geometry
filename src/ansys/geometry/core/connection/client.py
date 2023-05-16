@@ -10,6 +10,7 @@ import grpc
 from grpc._channel import _InactiveRpcError
 from grpc_health.v1 import health_pb2, health_pb2_grpc
 
+from ansys.geometry.core.connection.admin import Admin
 from ansys.geometry.core.connection.defaults import DEFAULT_HOST, DEFAULT_PORT, MAX_MESSAGE_LENGTH
 from ansys.geometry.core.connection.local_instance import LocalDockerInstance
 from ansys.geometry.core.logger import LOG as logger
@@ -126,6 +127,8 @@ class GrpcClient:
             if isinstance(logging_file, Path):
                 logging_file = str(logging_file)
             self._log.log_to_file(filename=logging_file, level=logging_level)
+
+        self.admin = Admin(self.channel)
 
     @property
     def channel(self) -> grpc.Channel:

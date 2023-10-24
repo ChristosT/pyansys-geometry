@@ -1,0 +1,128 @@
+
+
+
+
+MissingFaceProblemAreas
+=======================
+
+.. py:class:: MissingFaceProblemAreas(id: str, edges: beartype.typing.List[str], grpc_client: ansys.geometry.core.connection.GrpcClient)
+   :canonical: ansys.geometry.core.tools.problem_areas.MissingFaceProblemAreas
+
+
+
+Bases: :py:obj:`ProblemArea`
+
+Provides missing face problem area definition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overview
+--------
+.. py:currentmodule:: MissingFaceProblemAreas
+.. tab-set::
+
+
+
+    .. tab-item:: Methods
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~fix`
+            - Fix the problem area.
+
+
+    .. tab-item:: Properties
+
+        .. list-table::
+          :header-rows: 0
+          :widths: auto
+
+          * - :py:attr:`~edges`
+            - The list of the ids of the edges connected to this problem area.
+
+
+
+
+
+
+Import detail
+-------------
+
+.. code-block:: python
+
+    from ansys.geometry.core.tools.problem_areas import MissingFaceProblemAreas
+
+
+Property detail
+---------------
+.. py:property:: edges
+   :canonical: ansys.geometry.core.tools.problem_areas.MissingFaceProblemAreas.edges
+   :type: beartype.typing.List[str]
+
+
+   
+   The list of the ids of the edges connected to this problem area.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+
+
+Method detail
+-------------
+.. py:method:: fix() -> ansys.geometry.core.tools.repair_tool_message.RepairToolMessage
+
+   
+   Fix the problem area.
+
+
+
+   :Returns:
+
+       message: :obj:`RepairToolMessage`
+           Message containing created and/or modified bodies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
